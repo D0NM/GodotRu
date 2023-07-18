@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdh6pyr0fupwg"]
+
+[ext_resource type="PackedScene" uid="uid://ed1kq1mcqrrq" path="res://Player/player.tscn" id="1_l40jw"]
+[ext_resource type="PackedScene" uid="uid://r3cwuj6v3xsi" path="res://Enemy/enemy.tscn" id="2_8h1tc"]
+
+[node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_l40jw")]
+position = Vector2(383, 320)
+
+[node name="Enemy" parent="." instance=ExtResource("2_8h1tc")]
+position = Vector2(764, 339)

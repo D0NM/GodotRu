@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1689696117
+icon.svg::CompressedTexture2D::4902049416592588947::1689689699::1689689703::1::::<><>::
+world.tscn::PackedScene::4999768844228501502::1689692535::0::1::::<><>::uid://ed1kq1mcqrrq::::res://Player/player.tscn<>uid://r3cwuj6v3xsi::::res://Enemy/enemy.tscn
+::res://Enemy/::1689692670
+enemy.gd::GDScript::-1::1689692642::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::1251174706219596440::1689692642::0::1::::<><>::uid://cb3ubjtqm0wox::::res://icon.svg<>res://Enemy/enemy.gd
+::res://Player/::1689692671
+player.gd::GDScript::-1::1689692526::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::288545888652349878::1689692395::0::1::::<><>::uid://cb3ubjtqm0wox::::res://icon.svg<>res://Player/player.gd
+::res://RES/::1689692671
+grass1.png::CompressedTexture2D::3239644823257008952::1689689597::1689689769::1::::<><>::
+grass2.png::CompressedTexture2D::2880202372262902127::1689689621::1689689703::1::::<><>::
+wall.png::CompressedTexture2D::5091983094107786479::1689689576::1689689703::1::::<><>::
