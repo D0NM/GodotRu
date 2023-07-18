@@ -1,6 +1,4 @@
-# GodotRu
-Дорогие друзья, здесь я буду выкладывать заготовки проектов
+# Дорогие друзья! GodotRu
+Здесь я буду выкладывать заготовки проектов для уроков и задач по [GODOT 4.1 Game engine](https://godotengine.org/) 
 
-для уроков и задач по GODOT 4.1
-
-моего YouTube канала [Уроки GODOT для всех](https://www.youtube.com/@GODOTru)
+для моего YouTube канала [Уроки GODOT для всех](https://www.youtube.com/@GODOTru)
