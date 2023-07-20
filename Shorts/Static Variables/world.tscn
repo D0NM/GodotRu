@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdh6pyr0fupwg"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_qap7y"]
+[ext_resource type="PackedScene" uid="uid://r3cwuj6v3xsi" path="res://Globbie/globbie.tscn" id="2_kkv7q"]
+[ext_resource type="PackedScene" uid="uid://swyu7v6dq0ua" path="res://Stattie/stattie.tscn" id="3_gb4dp"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_qap7y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+limit_left = 0
+limit_top = 0
+limit_right = 500
+limit_bottom = 500
+
+[node name="Globbie" parent="." instance=ExtResource("2_kkv7q")]
+position = Vector2(132, 265)
+
+[node name="Stattie" parent="." instance=ExtResource("3_gb4dp")]
+position = Vector2(364, 193)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LabelGlobalN" type="Label" parent="CanvasLayer"]
+offset_left = 27.0
+offset_top = 21.0
+offset_right = 110.0
+offset_bottom = 47.0
+size_flags_horizontal = 0
+text = "Global N: ?"
+
+[node name="LabelStaticN" type="Label" parent="CanvasLayer"]
+offset_left = 29.0
+offset_top = 119.0
+offset_right = 113.0
+offset_bottom = 145.0
+size_flags_horizontal = 0
+text = "Static N: ?"
+
+[node name="ButtonAddGlobbie" type="Button" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 210.0
+offset_bottom = 82.0
+size_flags_horizontal = 0
+text = "Добавь Globbie"
+
+[node name="ButtonAddStattie" type="Button" parent="CanvasLayer"]
+offset_left = 23.0
+offset_top = 142.0
+offset_right = 213.0
+offset_bottom = 176.0
+size_flags_horizontal = 0
+text = "Добавь Stattie"
+
+[connection signal="pressed" from="CanvasLayer/ButtonAddGlobbie" to="." method="_on_button_add_globbie_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonAddStattie" to="." method="_on_button_add_stattie_pressed"]
