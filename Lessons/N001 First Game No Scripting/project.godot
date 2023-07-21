@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="N1 Lesson"
+config/description="Урок N1 - Делаем игру не умея писать скрипты"
+run/main_scene="res://world.tscn"
+config/features=PackedStringArray("4.1", "GL Compatibility")
+boot_splash/bg_color=Color(0.137255, 0.117647, 0.443137, 1)
+boot_splash/image="res://Splash/my_N0_logo.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=500
+window/size/resizable=false
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -1,0 +1,12 @@
+Label
+VisibleOnScreenNotifier2D
+VisibleOnScreenEnabler2D
+CanvasLayer
+CollisionShape2D
+Area2D
+Container
+Control
+Button
+CharacterBody2D
+TileMap
+Camera2D

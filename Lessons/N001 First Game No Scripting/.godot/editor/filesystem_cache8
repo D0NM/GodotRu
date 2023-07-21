@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1689953643
+icon.svg::CompressedTexture2D::7230260453310593864::1689951379::1689951383::1::::<><>::
+world.tscn::PackedScene::2297963282470606970::1689953393::0::1::::<><>::uid://m4jyqhgsmrpd::::res://Wall/wall.tscn<>uid://bepiraltwy534::::res://Player/player.tscn
+::res://Player/::1689953393
+player.gd::GDScript::-1::1689953302::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::2698657836881142157::1689953393::0::1::::<><>::uid://dbanllkqq25su::::res://icon.svg<>res://Player/player.gd
+::res://Splash/::1689952615
+my_N0_logo.png::CompressedTexture2D::8635683386039321164::1689952613::1689952615::1::::<><>::
+::res://Wall/::1689953393
+wall.tscn::PackedScene::902723241997129413::1689953393::0::1::::<><>::
