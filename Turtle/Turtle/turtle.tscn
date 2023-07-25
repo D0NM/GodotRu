@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl6tpoowt8u1b"]
+
+[ext_resource type="Script" path="res://Turtle/turtle.gd" id="1_63tbk"]
+[ext_resource type="Texture2D" uid="uid://bahm0r8jt2wvm" path="res://Turtle/turtle.png" id="1_hyakt"]
+
+[node name="Turtle" type="Node2D"]
+script = ExtResource("1_63tbk")
+
+[node name="TurtleImg" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.494118)
+rotation = 0.787794
+texture = ExtResource("1_hyakt")
+
+[node name="LabelCommand" type="Label" parent="."]
+show_behind_parent = true
+offset_left = -72.0
+offset_top = 49.0
+offset_right = 72.0
+offset_bottom = 75.0
+pivot_offset = Vector2(72, -49)
+horizontal_alignment = 1
+
+[connection signal="say_this" from="." to="." method="_on_say_this"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4sapn1ucqimd"]
+
+[ext_resource type="PackedScene" uid="uid://bl6tpoowt8u1b" path="res://Turtle/turtle.tscn" id="1_rx1dq"]
+
+[node name="World" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Turtle" parent="." instance=ExtResource("1_rx1dq")]
+position = Vector2(320, 320)
+scale = Vector2(0.75, 0.75)
+skew = 0.00174533
+metadata/_edit_lock_ = true
+
+[node name="Пуск" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 599.0
+offset_right = 83.0
+offset_bottom = 630.0
+text = "СТАРТ"
+metadata/_edit_lock_ = true
+
+[node name="Version" type="Label" parent="."]
+offset_left = 581.0
+offset_top = 601.0
+offset_right = 624.0
+offset_bottom = 627.0
+text = "v1.1"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="Пуск" to="Turtle" method="start"]
