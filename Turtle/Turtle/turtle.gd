@@ -1,13 +1,11 @@
 extends Node2D
-
 # Исполнитель ЧЕРЕПАШИЧ by Mikhail Bratus https://www.youtube.com/@GODOTru
 
 @export var enable_speech: bool = true ## разрешить говорилку
 @export var SPEED = 75.0 ## скорость движения вперед
 @export var TURNING_SPEED = 1.6 ## скорость поворота
 signal say_this(text)
-enum {GO_FORWARD, JUMP_FORWARD, TURN, JUMP, COLOR}
-const SQUARE_SIDE = 640
+enum {GO_FORWARD, JUMP_FORWARD, TURN, JUMP_TO, COLOR}
 const colors = {
 	"белый" = Color.WHITE,
 	"красный" = Color.RED,
@@ -25,6 +23,7 @@ const colors = {
 	"yellow" = Color.YELLOW,
 	"black" = Color.BLACK,
 }
+var screen_size: Vector2
 var curr_angle: float ## желаемый угол поворота
 var curr_color
 var curr_command
@@ -34,6 +33,7 @@ var voices
 var voice_id
 
 func _ready():
+	screen_size = get_viewport_rect().size
 	length_to_go = 0.0
 	skew = 0.0
 	curr_angle = rotation
@@ -49,14 +49,8 @@ func _ready():
 	
 func _process(delta):
 	$LabelCommand.rotation = -rotation # чтобы не вращалась с черепахой
-	if position.x > SQUARE_SIDE:
-		position.x = position.x - SQUARE_SIDE
-	if position.x < 0:
-		position.x = SQUARE_SIDE - position.x
-	if position.y > SQUARE_SIDE:
-		position.y = position.y - SQUARE_SIDE
-	if position.y < 0:
-		position.y = SQUARE_SIDE - position.y
+	position.x = wrapf(position.x, 0, screen_size.x) # зациклить экран по горизонтали
+	position.y = wrapf(position.y, 0, screen_size.y) # зациклить экран по вертикали
 	if enable_speech and DisplayServer.tts_is_speaking():
 		return
 	if curr_command:
@@ -98,12 +92,11 @@ func _process(delta):
 						curr_command = null	
 				else:
 					curr_command = null
-			COLOR, JUMP, JUMP_FORWARD:
+			COLOR, JUMP_TO, JUMP_FORWARD:
 				curr_command = null
 		return				
 	if arr_of_lines.size() < 1:
 		return
-
 	curr_command = arr_of_lines[0] # взять следующую команду
 	$LabelCommand.add_theme_color_override("font_color", Color.WHITE)
 	match curr_command.command:
@@ -131,9 +124,8 @@ func _process(delta):
 					say_this.emit("Налево " + str(abs(rad_to_deg(curr_command.rotation))))
 				curr_angle = rotation + curr_command.rotation
 			else:
-				say_this.emit("Параметр функции поворота может быть только числом!")
-				
-		JUMP:
+				say_this.emit("Параметр функции поворота может быть только числом!")				
+		JUMP_TO:
 			skew = 0
 			if (typeof(curr_command.x) == TYPE_FLOAT or typeof(curr_command.x) == TYPE_INT) and (typeof(curr_command.y) == TYPE_FLOAT or typeof(curr_command.y) == TYPE_INT):
 				say_this.emit("Прыгай " + str(curr_command.x) + " " + str(curr_command.y))
@@ -180,7 +172,7 @@ func turn_left(r):
 ## Черепаха прыгает на координаты x, y
 func jump_to(x, y):
 	print("jump_to(" + str(x) + ", " + str(y) + ")")
-	arr_of_lines.append({ command = JUMP, x = x, y = y })
+	arr_of_lines.append({ command = JUMP_TO, x = x, y = y })
 ## Черепаха выбирает цвет из списка. Можно использовать строку "случайный"
 func set_color(col):
 	print("set_color(" + col + ")")
@@ -190,5 +182,5 @@ func set_color(col):
 
 func start():
 	pass
-
+	
 ###########################################################################
