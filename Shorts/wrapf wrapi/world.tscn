@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhna8ehs5ivdt"]
+
+[ext_resource type="PackedScene" uid="uid://c0ahg5sv7gb41" path="res://peepo.tscn" id="1_fc7l8"]
+
+[node name="world" type="Node2D"]
+
+[node name="Пипо" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(241, 254)
+
+[node name="Пипо2" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(206, 226)
+
+[node name="Пипо5" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(274, 284)
+
+[node name="Пипо6" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(246, 197)
+
+[node name="Пипо7" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(244, 316)
+
+[node name="Пипо8" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(169, 258)
+
+[node name="Пипо9" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(316, 260)
+
+[node name="Пипо3" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(210, 283)
+
+[node name="Пипо4" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(273, 238)
