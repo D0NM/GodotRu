@@ -1,0 +1,8 @@
+CollisionShape2D
+Area2D
+TextureButton
+TileMap
+AnimatedSprite2D
+ColorRect
+StaticBody2D
+CharacterBody2D

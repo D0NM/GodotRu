@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://diufn6qc625im"]
+
+[ext_resource type="Script" path="res://ExitDoor/exit_door.gd" id="1_i7py6"]
+[ext_resource type="Texture2D" uid="uid://jeloilbcarsk" path="res://ExitDoor/5692094.png" id="2_siucx"]
+[ext_resource type="Texture2D" uid="uid://dlcspmaqi3c3r" path="res://ExitDoor/4998821.png" id="3_iag3k"]
+[ext_resource type="Texture2D" uid="uid://dww0vevxd7bo1" path="res://ExitDoor/745400.png" id="4_6mh1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q711o"]
+size = Vector2(554.5, 590.5)
+
+[node name="ExitDoor" type="Node2D"]
+script = ExtResource("1_i7py6")
+
+[node name="ClosedDoor" type="Sprite2D" parent="."]
+texture = ExtResource("2_siucx")
+metadata/_edit_lock_ = true
+
+[node name="OpenDoor" type="Sprite2D" parent="."]
+position = Vector2(-33, -11.25)
+scale = Vector2(1.01758, 0.852539)
+texture = ExtResource("3_iag3k")
+metadata/_edit_lock_ = true
+
+[node name="ConfirmExit" type="TextureButton" parent="."]
+visible = false
+offset_left = -253.0
+offset_top = -859.0
+offset_right = 259.0
+offset_bottom = -347.0
+texture_normal = ExtResource("4_6mh1t")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -41)
+shape = SubResource("RectangleShape2D_q711o")
+
+[connection signal="pressed" from="ConfirmExit" to="." method="_on_confirm_exit_pressed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

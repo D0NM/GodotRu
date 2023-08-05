@@ -1,0 +1,27 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1691211955
+icon.svg::CompressedTexture2D::8987977549064863596::1691124634::1691124643::1::::<><>::
+world1_2.tscn::PackedScene::3848661415561676074::1691211235::0::1::::<><>::uid://bk88fx24hu5tl::::res://Player/player.tscn<>uid://crhp3e8svv8xk::::res://res/Terrain/Terrain (16x16).png<>uid://diufn6qc625im::::res://ExitDoor/exit_door.tscn
+world.tscn::PackedScene::9067159054076487129::1691211235::0::1::::<><>::uid://bk88fx24hu5tl::::res://Player/player.tscn<>uid://crhp3e8svv8xk::::res://res/Terrain/Terrain (16x16).png<>uid://diufn6qc625im::::res://ExitDoor/exit_door.tscn
+::res://ExitDoor/::1691211235
+745400.png::CompressedTexture2D::8750388591781071562::1691209526::1691209847::1::::<><>::
+4998821.png::CompressedTexture2D::7936588410403111729::1691209500::1691209847::1::::<><>::
+5692094.png::CompressedTexture2D::640650429021408306::1691209511::1691209847::1::::<><>::
+exit_door.gd::GDScript::-1::1691210811::0::1::::<>Node2D<>::
+exit_door.tscn::PackedScene::7762388808623472284::1691211235::0::1::::<><>::res://ExitDoor/exit_door.gd<>uid://jeloilbcarsk::::res://ExitDoor/5692094.png<>uid://dlcspmaqi3c3r::::res://ExitDoor/4998821.png<>uid://dww0vevxd7bo1::::res://ExitDoor/745400.png
+::res://Player/::1691211235
+player.gd::GDScript::-1::1691156259::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::3158447426762790905::1691211235::0::1::::<><>::res://Player/player.gd<>uid://dsmkiyfy6s0v5::::res://res/Main Characters/Pink Man/Double Jump (32x32).png<>uid://bgfvovr8cn7i0::::res://res/Main Characters/Pink Man/Jump (32x32).png<>uid://fb60fj41mef6::::res://res/Main Characters/Pink Man/Fall (32x32).png<>uid://cri5yfmwlgm6p::::res://res/Main Characters/Pink Man/Hit (32x32).png<>uid://dqllunk4ald3l::::res://res/Main Characters/Pink Man/Idle (32x32).png<>uid://6hivjypm3hcl::::res://res/Main Characters/Pink Man/Run (32x32).png<>uid://bwd65kuim7g38::::res://res/Main Characters/Pink Man/Wall Jump (32x32).png
+::res://res/::1691211825
+assets_source.txt::TextFile::-1::1691157489::0::1::::<><>::
+::res://res/Main Characters/::1691211820
+::res://res/Main Characters/Pink Man/::1691209376
+Double Jump (32x32).png::CompressedTexture2D::8448056495308546444::1691153662::1691153663::1::::<><>::
+Fall (32x32).png::CompressedTexture2D::354935745440443449::1691153662::1691153663::1::::<><>::
+Hit (32x32).png::CompressedTexture2D::5984431382270875773::1691153662::1691153663::1::::<><>::
+Idle (32x32).png::CompressedTexture2D::8305696006950667975::1691153662::1691153663::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::2819176823008976529::1691153662::1691153663::1::::<><>::
+Run (32x32).png::CompressedTexture2D::2190828545155690219::1691153662::1691153663::1::::<><>::
+Wall Jump (32x32).png::CompressedTexture2D::3938704734095274929::1691153662::1691153663::1::::<><>::
+::res://res/Terrain/::1691209377
+Terrain (16x16).png::CompressedTexture2D::5981463372550716436::1691153662::1691153663::1::::<><>::
