@@ -1,0 +1,14 @@
+Button
+MarginContainer
+CanvasLayer
+HBoxContainer
+VBoxContainer
+Label
+Control
+CollisionShape2D
+Area2D
+TileMap
+AnimatedSprite2D
+ColorRect
+StaticBody2D
+CharacterBody2D
