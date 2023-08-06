@@ -1,0 +1,7 @@
+res://Menus/main_menu.tscn
+res://Levels/level3.tscn
+res://Traps/Spikes/spikes.tscn
+res://Player/player.tscn
+res://Levels/level1.tscn
+res://Menus/game_over.tscn
+res://Menus/in_game_menu.tscn
