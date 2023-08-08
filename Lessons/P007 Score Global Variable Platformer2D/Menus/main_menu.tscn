@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://sru8yyknu2t8"]
+
+[ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_0fjnk"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_0fjnk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -68.0
+offset_right = 59.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StartGame" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "НАЧАТЬ ИГРУ"
+
+[node name="HIScore" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "РЕКОРДЫ"
+
+[node name="Option" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "НАСТРОЙКИ"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ВЫХОД"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HIScore" to="." method="_on_hi_score_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
