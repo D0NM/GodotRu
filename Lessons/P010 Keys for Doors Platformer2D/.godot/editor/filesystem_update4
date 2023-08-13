@@ -1,0 +1,8 @@
+res://Items/orange.tscn
+res://Levels/level1.tscn
+res://Player/player.tscn
+res://Items/strawberry.tscn
+res://Items/item.gd
+res://Items/key.tscn
+res://Player/player.gd
+res://ExitDoor/exit_door.gd
