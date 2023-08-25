@@ -1,0 +1,7 @@
+res://Enemy/chicken.tscn
+res://Enemy/chicken.gd
+res://Levels/level1.tscn
+res://Enemies/chicken.tscn
+res://Enemies/chicken.gd
+res://Player/player.tscn
+res://Items/key.tscn
