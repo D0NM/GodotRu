@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://bflhysl2ybndd"]
+
+[ext_resource type="Script" path="res://Items/item.gd" id="1_jlm0g"]
+[ext_resource type="Texture2D" uid="uid://cgxesr868i7mr" path="res://res/Things/11a.png" id="2_incub"]
+[ext_resource type="AudioStream" uid="uid://r6cr13du13g0" path="res://res/Sounds/blop1.mp3" id="3_6jhhf"]
+[ext_resource type="AudioStream" uid="uid://ce6gulpfifohu" path="res://res/Sounds/voice4.mp3" id="4_n7ckn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h58sy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33ja1"]
+atlas = ExtResource("2_incub")
+region = Rect2(0, 0, 16, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1w6pl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33ja1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Strawberry" type="Area2D"]
+script = ExtResource("1_jlm0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h58sy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1w6pl")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6jhhf")
+
+[node name="OnRecord" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_n7ckn")
