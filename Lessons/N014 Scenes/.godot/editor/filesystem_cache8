@@ -1,7 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696616872
+::res://::1697046875
 icon.svg::CompressedTexture2D::6133732784390277175::1696584577::1696616796::1::::<><>::
-root.tscn::PackedScene::8125701783648295828::1696616828::0::1::::<><>::
+root.gd::GDScript::-1::1696859699::0::1::::<>Node2D<>::
+root.tscn::PackedScene::8125701783648295828::1697045566::0::1::::<><>::res://root.gd<>uid://dgk2vo3wxtwd3::::res://MyRes/white-circle.png<>uid://dfeiewlfencqr::::res://MyRes/arrow1.png<>uid://d1bm41640r6mp::::res://MyRes/arrow2.png<>uid://y8hy2d0mgc8k::::res://MyRes/arrow3.png<>uid://ctnhxhlexsrul::::res://icon.svg
 ::res://MyRes/::1696616796
 arrow1.png::CompressedTexture2D::7518957832143043521::1696576066::1696616796::1::::<><>::
 arrow2.png::CompressedTexture2D::8987018170206425243::1696576108::1696616796::1::::<><>::

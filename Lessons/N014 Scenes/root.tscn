@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://dn1feedrv7y5i"]
+
+[ext_resource type="Script" path="res://root.gd" id="1_2cog8"]
+[ext_resource type="Texture2D" uid="uid://dgk2vo3wxtwd3" path="res://MyRes/white-circle.png" id="2_j8s6t"]
+[ext_resource type="Texture2D" uid="uid://dfeiewlfencqr" path="res://MyRes/arrow1.png" id="3_eqrcd"]
+[ext_resource type="Texture2D" uid="uid://d1bm41640r6mp" path="res://MyRes/arrow2.png" id="4_5uksa"]
+[ext_resource type="Texture2D" uid="uid://y8hy2d0mgc8k" path="res://MyRes/arrow3.png" id="5_uq8oc"]
+[ext_resource type="Texture2D" uid="uid://ctnhxhlexsrul" path="res://icon.svg" id="6_k3es6"]
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_2cog8")
+
+[node name="White-circle" type="Sprite2D" parent="."]
+position = Vector2(238, 232)
+scale = Vector2(3.11667, 3.11667)
+texture = ExtResource("2_j8s6t")
+
+[node name="ArrowMinutes" type="Sprite2D" parent="."]
+position = Vector2(240, 232)
+scale = Vector2(0.536765, 0.536765)
+texture = ExtResource("3_eqrcd")
+offset = Vector2(29.8083, 0)
+
+[node name="ArrowHours" type="Sprite2D" parent="."]
+position = Vector2(242, 233)
+scale = Vector2(0.873494, 0.873494)
+texture = ExtResource("4_5uksa")
+offset = Vector2(28.6207, 2.28967)
+
+[node name="ArrowSeconds" type="Sprite2D" parent="."]
+position = Vector2(241, 232)
+scale = Vector2(0.296392, 0.296392)
+texture = ExtResource("5_uq8oc")
+offset = Vector2(293.531, 6.7478)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 158.0
+offset_top = 321.0
+offset_right = 321.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "?????"
+horizontal_alignment = 1
+
+[node name="Eye" type="Sprite2D" parent="."]
+position = Vector2(675, 467)
+texture = ExtResource("2_j8s6t")
+
+[node name="Zrachok" type="Sprite2D" parent="Eye"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(21.9999, 5.99997)
+scale = Vector2(0.529167, 0.529167)
+texture = ExtResource("2_j8s6t")
+
+[node name="Blik" type="Sprite2D" parent="Eye/Zrachok"]
+position = Vector2(1.89014, 1.88977)
+rotation = -0.00518566
+scale = Vector2(0.181102, 0.36471)
+texture = ExtResource("2_j8s6t")
+offset = Vector2(-219.133, -6.95667)
+
+[node name="Eye2" type="Sprite2D" parent="."]
+position = Vector2(849, 470)
+texture = ExtResource("2_j8s6t")
+
+[node name="Zrachok" type="Sprite2D" parent="Eye2"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(21.9999, 5.99997)
+scale = Vector2(0.529167, 0.529167)
+texture = ExtResource("2_j8s6t")
+
+[node name="Blik" type="Sprite2D" parent="Eye2/Zrachok"]
+position = Vector2(1.89014, 1.88977)
+rotation = -0.00518566
+scale = Vector2(0.181102, 0.36471)
+texture = ExtResource("2_j8s6t")
+offset = Vector2(-219.133, -6.95667)
+
+[node name="Cursor" type="Sprite2D" parent="."]
+position = Vector2(713, 307)
+scale = Vector2(0.257813, 0.257813)
+texture = ExtResource("6_k3es6")
