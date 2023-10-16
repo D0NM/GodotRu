@@ -1,6 +1,0 @@
-TileMap
-AnimatedSprite2D
-ColorRect
-CollisionShape2D
-StaticBody2D
-CharacterBody2D

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvbq47hwxqhbn"]
+
+[ext_resource type="Script" path="res://Menus/game_over.gd" id="1_s2bxl"]
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_s2bxl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YouDied" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "ВЫ УМЕРЛИ"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="MarginContainer/YouDied" to="." method="_on_you_died_pressed"]
