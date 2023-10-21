@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c274gkltjw3er"]
+
+[ext_resource type="Script" path="res://Turtle/turtle.gd" id="1_0gqgb"]
+[ext_resource type="Texture2D" uid="uid://31qmyc6b8pj0" path="res://MyRes/turtlePic.png" id="2_f6cei"]
+
+[node name="Turtle" type="Node2D" groups=["hard", "turtles"]]
+script = ExtResource("1_0gqgb")
+
+[node name="TurtlePic" type="Sprite2D" parent="."]
+position = Vector2(-1, -3)
+texture = ExtResource("2_f6cei")

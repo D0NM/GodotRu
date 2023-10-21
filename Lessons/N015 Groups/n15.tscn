@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxc35j6tgvkm4"]
+
+[ext_resource type="Script" path="res://n15.gd" id="1_b4kpk"]
+[ext_resource type="PackedScene" uid="uid://c274gkltjw3er" path="res://Turtle/turtle.tscn" id="1_n3v7y"]
+[ext_resource type="PackedScene" uid="uid://0ahthulrkdr0" path="res://Peepo/peepo.tscn" id="2_fj1dx"]
+[ext_resource type="Texture2D" uid="uid://dk4reurxml4jg" path="res://icon.svg" id="4_p18hh"]
+
+[node name="N15" type="Node2D"]
+script = ExtResource("1_b4kpk")
+
+[node name="ButtonHide" type="Button" parent="."]
+offset_left = 6.0
+offset_top = 364.0
+offset_right = 96.0
+offset_bottom = 395.0
+size_flags_vertical = 8
+text = "СПРЯТАТЬ"
+
+[node name="ButtonTest" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 277.0
+offset_right = 99.0
+offset_bottom = 308.0
+size_flags_vertical = 8
+text = "ТЕСТ"
+
+[node name="ButtonShow" type="Button" parent="."]
+offset_left = 6.0
+offset_top = 326.0
+offset_right = 99.0
+offset_bottom = 357.0
+text = "ПОКАЗАТЬ"
+
+[node name="ButtonHideFrogs" type="Button" parent="."]
+offset_left = 260.0
+offset_top = 363.0
+offset_right = 389.0
+offset_bottom = 394.0
+size_flags_vertical = 8
+text = "СПРЯТАТЬ ЖАБ"
+
+[node name="ButtonHideTurtles" type="Button" parent="."]
+offset_left = 110.0
+offset_top = 363.0
+offset_right = 247.0
+offset_bottom = 394.0
+size_flags_vertical = 8
+text = "СПРЯТАТЬ ЧРПХ"
+
+[node name="ButtonHideHard" type="Button" parent="."]
+offset_left = 156.0
+offset_top = 320.0
+offset_right = 360.0
+offset_bottom = 351.0
+size_flags_vertical = 8
+text = "СПРЯТАТЬ ТВЕРТДОТЕЛЫХ"
+
+[node name="Turtle" parent="." instance=ExtResource("1_n3v7y")]
+position = Vector2(74, 82)
+scale = Vector2(0.418416, 0.418416)
+
+[node name="Turtle2" parent="." instance=ExtResource("1_n3v7y")]
+position = Vector2(156, 180)
+scale = Vector2(-0.329209, -0.329209)
+
+[node name="Turtle3" parent="." instance=ExtResource("1_n3v7y")]
+position = Vector2(61, 182)
+scale = Vector2(0.26734, 0.26005)
+
+[node name="Peepo" parent="." instance=ExtResource("2_fj1dx")]
+position = Vector2(190, 77)
+scale = Vector2(0.485771, 0.485771)
+
+[node name="Icon" type="Sprite2D" parent="." groups=["hard", "icons"]]
+position = Vector2(313, 82)
+scale = Vector2(0.663806, 0.663806)
+texture = ExtResource("4_p18hh")
+
+[connection signal="pressed" from="ButtonHide" to="." method="_on_button_hide_pressed"]
+[connection signal="pressed" from="ButtonTest" to="." method="_on_button_test_pressed"]
+[connection signal="pressed" from="ButtonShow" to="." method="_on_button_show_pressed"]
+[connection signal="pressed" from="ButtonHideTurtles" to="." method="_on_button_hide_turtles_pressed"]
+[connection signal="pressed" from="ButtonHideHard" to="." method="_on_button_hide_hard_pressed"]
