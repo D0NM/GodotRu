@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwi5trlewbtgg"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_6p3mr"]
+[ext_resource type="Texture2D" uid="uid://dm4kfgyuf651j" path="res://icon.svg" id="2_eduti"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_6p3mr")
+
+[node name="Save" type="Button" parent="."]
+offset_left = 29.0
+offset_top = 30.0
+offset_right = 115.0
+offset_bottom = 84.0
+text = "СОХРАНИ
+SAVE"
+
+[node name="Load" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 103.0
+offset_right = 112.0
+offset_bottom = 157.0
+text = "ЗАГРУЗИ
+LOAD
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 12.0
+offset_top = 199.0
+offset_right = 245.0
+offset_bottom = 315.0
+metadata/_edit_group_ = true
+
+[node name="StartsN" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Игра запускалась ? раз"
+
+[node name="DeathsN" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Игрок умер ? раз"
+
+[node name="KillsN" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Игрок убил монстров  ? раз"
+
+[node name="SavesN" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Игру сохраняли ? раз"
+
+[node name="Morda" type="Sprite2D" parent="."]
+position = Vector2(240, 98)
+texture = ExtResource("2_eduti")
+
+[node name="Name" type="Label" parent="Morda"]
+offset_left = -18.0
+offset_top = 65.0
+offset_right = 22.0
+offset_bottom = 88.0
+text = "Боба"
+
+[node name="KillMob" type="Button" parent="Morda"]
+offset_left = -83.0
+offset_top = 40.0
+offset_right = -32.0
+offset_bottom = 71.0
+text = "Убил"
+
+[node name="Died" type="Button" parent="Morda"]
+offset_left = 32.0
+offset_top = -72.0
+offset_right = 83.0
+offset_bottom = -41.0
+text = "Умер
+"
+
+[node name="Ширина" type="TextEdit" parent="."]
+offset_left = 358.0
+offset_top = 99.0
+offset_right = 464.0
+offset_bottom = 137.0
+placeholder_text = "ШИРИНА"
+
+[node name="Злость" type="TextEdit" parent="."]
+offset_left = 357.0
+offset_top = 45.0
+offset_right = 455.0
+offset_bottom = 83.0
+size_flags_horizontal = 4
+placeholder_text = "ЗЛОСТЬ"
+
+[node name="ИмяИгрока1" type="TextEdit" parent="."]
+offset_left = 356.0
+offset_top = 154.0
+offset_right = 462.0
+offset_bottom = 192.0
+placeholder_text = "ИГРОК 1"
+
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Morda/KillMob" to="." method="_on_kill_mob_pressed"]
+[connection signal="pressed" from="Morda/Died" to="." method="_on_died_pressed"]
+[connection signal="text_changed" from="Ширина" to="." method="_on_ширина_text_changed"]
+[connection signal="text_changed" from="Злость" to="." method="_on_злость_text_changed"]
+[connection signal="text_changed" from="ИмяИгрока1" to="." method="_on_имяигрока1_text_changed"]
