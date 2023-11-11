@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ahg5sv7gb41"]
+
+[ext_resource type="Script" path="res://peepo.gd" id="1_a0ank"]
+[ext_resource type="Texture2D" uid="uid://cepdqmyrlior6" path="res://peepo1.png" id="1_i65t7"]
+
+[node name="Пипо" type="Node2D"]
+script = ExtResource("1_a0ank")
+
+[node name="Peepo1" type="Sprite2D" parent="."]
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("1_i65t7")
+
+[node name="Container" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = -31.0
+offset_top = 29.0
+offset_right = 31.0
+offset_bottom = 55.0
+pivot_offset = Vector2(31, -29)
+text = "LOL"
+horizontal_alignment = 1

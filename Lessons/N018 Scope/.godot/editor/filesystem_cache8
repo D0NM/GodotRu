@@ -1,0 +1,7 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1699678059
+icon.svg::CompressedTexture2D::7326769144981136927::1690743821::1699678059::1::::<><>::
+peepo1.png::CompressedTexture2D::5084773800072946857::1690743821::1699678059::1::::<><>::
+peepo.gd::GDScript::-1::1699079360::0::1::::<>Node2D<>::
+peepo.tscn::PackedScene::6527999796553934792::1699079339::0::1::::<><>::res://peepo.gd<>uid://cepdqmyrlior6::::res://peepo1.png
+world.tscn::PackedScene::2904638652926264429::1699079385::0::1::::<><>::uid://c0ahg5sv7gb41::::res://peepo.tscn

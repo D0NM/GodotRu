@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhna8ehs5ivdt"]
+
+[ext_resource type="PackedScene" uid="uid://c0ahg5sv7gb41" path="res://peepo.tscn" id="1_fc7l8"]
+[ext_resource type="Script" path="res://world.gd" id="1_srvks"]
+[ext_resource type="Texture2D" uid="uid://dcne214wh3ydj" path="res://icon.svg" id="3_jodba"]
+[ext_resource type="Script" path="res://Icon.gd" id="4_cueqe"]
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_srvks")
+
+[node name="Пипо" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(63, 76)
+
+[node name="Пипо2" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(165, 179)
+
+[node name="Пипо3" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(261, 286)
+
+[node name="Пипо4" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(377, 384)
+
+[node name="Пипо5" parent="." instance=ExtResource("1_fc7l8")]
+position = Vector2(377, 83)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 442.0
+offset_right = 178.0
+offset_bottom = 494.0
+text = "SCOPE
+Область видимости"
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(120, 435)
+scale = Vector2(0.367188, 0.367188)
+texture = ExtResource("3_jodba")
+script = ExtResource("4_cueqe")
