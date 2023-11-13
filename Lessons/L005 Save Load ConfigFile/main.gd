@@ -23,10 +23,14 @@ func _on_died_pressed() -> void:
 
 func _on_save_pressed() -> void:
 	Globals.save_game()
-	
+
 func _on_load_pressed() -> void:
 	Globals.load_game()
 
 func _ready() -> void:
 	#пусто почему??? где LOAD ^__^
 	pass
+
+
+func _on_save_encrypt_pressed() -> void:
+	Globals.save_encrypt_game()

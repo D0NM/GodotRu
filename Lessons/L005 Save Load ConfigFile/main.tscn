@@ -7,18 +7,26 @@
 script = ExtResource("1_6p3mr")
 
 [node name="Save" type="Button" parent="."]
-offset_left = 29.0
-offset_top = 30.0
-offset_right = 115.0
-offset_bottom = 84.0
+offset_left = 15.0
+offset_top = 71.0
+offset_right = 101.0
+offset_bottom = 125.0
 text = "СОХРАНИ
 SAVE"
 
+[node name="SaveEncrypt" type="Button" parent="."]
+offset_left = 21.0
+offset_top = 134.0
+offset_right = 125.0
+offset_bottom = 188.0
+text = "СОХРАНИ
+ЗАШИФРУЙ"
+
 [node name="Load" type="Button" parent="."]
-offset_left = 32.0
-offset_top = 103.0
-offset_right = 112.0
-offset_bottom = 157.0
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 98.0
+offset_bottom = 65.0
 text = "ЗАГРУЗИ
 LOAD
 "
@@ -95,6 +103,7 @@ offset_bottom = 192.0
 placeholder_text = "ИГРОК 1"
 
 [connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="SaveEncrypt" to="." method="_on_save_encrypt_pressed"]
 [connection signal="pressed" from="Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Morda/KillMob" to="." method="_on_kill_mob_pressed"]
 [connection signal="pressed" from="Morda/Died" to="." method="_on_died_pressed"]
