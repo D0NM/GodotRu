@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgpclwpgvc6dq"]
+
+[ext_resource type="Script" path="res://Menus/in_game_menu.gd" id="1_3gmg0"]
+
+[node name="InGameMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_3gmg0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "Очки: ???"
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="HiScore" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "Рекорд: ???"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="ButtonToMenu" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "В МЕНЮ"
+
+[node name="ConfirmationMenu" type="VBoxContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -48.0
+offset_right = 55.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="ConfirmationMenu"]
+layout_mode = 2
+text = "ВЫ УВЕРЕНЫ?"
+
+[node name="ButtonYes" type="Button" parent="ConfirmationMenu"]
+layout_mode = 2
+text = "Да"
+
+[node name="ButtonNo" type="Button" parent="ConfirmationMenu"]
+layout_mode = 2
+text = "Нет"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/MarginContainer/ButtonToMenu" to="." method="_on_button_to_menu_pressed"]
+[connection signal="pressed" from="ConfirmationMenu/ButtonYes" to="." method="_on_button_yes_pressed"]
+[connection signal="pressed" from="ConfirmationMenu/ButtonNo" to="." method="_on_button_no_pressed"]
