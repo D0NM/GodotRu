@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://sru8yyknu2t8"]
+
+[ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_0fjnk"]
+[ext_resource type="Texture2D" uid="uid://dpd1ggowli76s" path="res://res/Background/Purple.png" id="2_jnks4"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_0fjnk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -68.0
+offset_right = 59.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StartGame" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "НАЧАТЬ ИГРУ"
+
+[node name="ContinueGame" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.654902, 0.6, 1)
+text = "ПРОДОЛЖИТЬ ИГРУ"
+
+[node name="HIScore" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "РЕКОРДЫ"
+
+[node name="Option" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "НАСТРОЙКИ"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ВЫХОД"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="StillParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Purple" type="Sprite2D" parent="ParallaxBackground/StillParallaxLayer"]
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("2_jnks4")
+centered = false
+
+[node name="MoveParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(480, 480)
+
+[node name="Purple" type="Sprite2D" parent="ParallaxBackground/MoveParallaxLayer"]
+self_modulate = Color(1, 1, 0.717647, 1)
+position = Vector2(238, 240.204)
+rotation = 0.785398
+scale = Vector2(5.26383, 5.26383)
+texture = ExtResource("2_jnks4")
+
+[node name="MoveParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(480, 480)
+
+[node name="Purple" type="Sprite2D" parent="ParallaxBackground/MoveParallaxLayer2"]
+self_modulate = Color(0.729412, 0.603922, 0.952941, 0.266667)
+position = Vector2(238, 240.204)
+rotation = 0.785398
+scale = Vector2(5.26383, 5.26383)
+texture = ExtResource("2_jnks4")
+
+[node name="MoveParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(480, 480)
+
+[node name="Purple" type="Sprite2D" parent="ParallaxBackground/MoveParallaxLayer3"]
+modulate = Color(0.290196, 0.415686, 0.87451, 1)
+self_modulate = Color(0.729412, 0.603922, 0.952941, 0.266667)
+position = Vector2(238, 240.204)
+rotation = 0.785398
+scale = Vector2(5.26383, 5.26383)
+texture = ExtResource("2_jnks4")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ContinueGame" to="." method="_on_continue_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HIScore" to="." method="_on_hi_score_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
